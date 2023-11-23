@@ -1,17 +1,18 @@
 import 'package:benvoice/Constant/text_style.dart';
 import 'package:benvoice/View/Widget/elevated_button.dart';
+import 'package:benvoice/demoDialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-class ConfirmationPaymentsTab extends StatefulWidget {
-  const ConfirmationPaymentsTab({super.key});
+class PendingPaymentsTab extends StatefulWidget {
+  const PendingPaymentsTab({super.key});
 
   @override
-  State<ConfirmationPaymentsTab> createState() => _ConfirmationPaymentsTabState();
+  State<PendingPaymentsTab> createState() => _PendingPaymentsTabState();
 }
 
-class _ConfirmationPaymentsTabState extends State<ConfirmationPaymentsTab> {
+class _PendingPaymentsTabState extends State<PendingPaymentsTab> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -39,7 +40,7 @@ class _ConfirmationPaymentsTabState extends State<ConfirmationPaymentsTab> {
                         child: Column(
                           children: [
                             ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () => DemoDialog(),
                               style: buildElevatedButtonStyle(const Color(0xFF4F9F4E)),
                               child: const Text("אישור"),
                             ),

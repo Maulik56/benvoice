@@ -1,5 +1,6 @@
 import 'package:benvoice/View/Home/IncomingTransfers/incoming_transfers.dart';
 import 'package:benvoice/View/Home/PendingPayment/pending_payment.dart';
+import 'package:benvoice/View/Home/Report/Monthly/payment_link_dialog.dart';
 import 'package:benvoice/View/Widget/elevated_button.dart';
 import 'package:benvoice/View/Widget/s_f_circular_chart.dart';
 import 'package:flutter/material.dart';
@@ -82,25 +83,7 @@ class _MonthlyReportScreenState extends State<MonthlyReportScreen> {
             titleColor: Colors.black,
           ),
           CommonElevatedButton(
-            onPressed: () {
-              Get.dialog(
-                Dialog(
-                  backgroundColor: Colors.white,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      SmallElevatedButton(
-                        onPressed: () => Get.back(),
-                        title: "Back",
-                        height: 62.h,
-                        width: 139.w,
-                      ),
-                    ],
-                  ),
-                ),
-                transitionDuration: Duration.zero,
-              );
-            },
+            onPressed: () => paymentLinkDialogBox(),
             backgroundColor: const Color(0xFFD9D9D9),
             title: "תשלום חדש",
             titleColor: Colors.black,

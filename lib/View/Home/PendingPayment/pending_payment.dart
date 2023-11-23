@@ -2,7 +2,7 @@ import 'package:benvoice/Constant/decoration.dart';
 import 'package:benvoice/Constant/image_path.dart';
 import 'package:benvoice/Constant/text_style.dart';
 import 'package:benvoice/View/Home/PendingPayment/tab_approved_payments.dart';
-import 'package:benvoice/View/Home/PendingPayment/tab_confirmation_payments.dart';
+import 'package:benvoice/View/Home/PendingPayment/tab_pending_payments.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -74,7 +74,7 @@ class _PendingPaymentScreenState extends State<PendingPaymentScreen> with Single
                   controller: _tabController,
                   children: const [
                     ApprovedPaymentsTab(),
-                    ConfirmationPaymentsTab(),
+                    PendingPaymentsTab(),
                   ],
                 ),
               ),
