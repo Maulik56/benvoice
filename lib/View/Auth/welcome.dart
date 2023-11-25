@@ -20,6 +20,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       body: Container(
         height: Get.height,
         width: Get.width,
+        clipBehavior: Clip.antiAlias,
         decoration: BackgroundColorContainer.kRadialGradient(),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -32,8 +33,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               ),
             ),
             SizedBox(height: 110.h),
-            SmallElevatedButton(
-              onPressed: () {
+            CommonElevatedButton(
+              onTap: () {
                 Get.to(
                   () => const AuthScreen(),
                   transition: Transition.rightToLeft,

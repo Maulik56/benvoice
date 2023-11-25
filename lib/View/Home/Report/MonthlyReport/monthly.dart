@@ -1,6 +1,7 @@
+import 'package:benvoice/Constant/text_style.dart';
 import 'package:benvoice/View/Home/IncomingTransfers/incoming_transfers.dart';
 import 'package:benvoice/View/Home/PendingPayment/pending_payment.dart';
-import 'package:benvoice/View/Home/Report/Monthly/payment_link_dialog.dart';
+import 'package:benvoice/View/Home/Report/MonthlyReport/payment_link_dialog.dart';
 import 'package:benvoice/View/Widget/elevated_button.dart';
 import 'package:benvoice/View/Widget/s_f_circular_chart.dart';
 import 'package:flutter/material.dart';
@@ -32,8 +33,9 @@ class _MonthlyReportScreenState extends State<MonthlyReportScreen> {
       child: Column(
         children: [
           ChartUtils.createDoughnutChart(data, _tooltip),
+          SizedBox(height: 18.h),
           CommonElevatedButton(
-            onPressed: () {
+            onTap: () {
               Get.to(
                 () => const IncomingTransfersScreen(),
                 duration: const Duration(milliseconds: 300),
@@ -41,12 +43,18 @@ class _MonthlyReportScreenState extends State<MonthlyReportScreen> {
                 transition: Transition.rightToLeft,
               );
             },
-            backgroundColor: Colors.green,
+            backgroundColor: const Color(0xFF4F9F4E),
             title: "הכנסות",
-            titleColor: Colors.white,
+            textStyle: FontTextStyle.w400Style(
+              color: Colors.white,
+              fontSize: 38.sp,
+            ),
+            height: 72.h,
+            width: 322.w,
           ),
+          SizedBox(height: 18.h),
           CommonElevatedButton(
-            onPressed: () {
+            onTap: () {
               Get.to(
                 () => const PendingPaymentScreen(),
                 duration: const Duration(milliseconds: 300),
@@ -54,20 +62,26 @@ class _MonthlyReportScreenState extends State<MonthlyReportScreen> {
                 transition: Transition.cupertino,
               );
             },
-            backgroundColor: const Color(0xff9B2A90),
+            backgroundColor: const Color(0xFF9B2A8F),
             title: "הוצאות",
-            titleColor: Colors.white,
+            textStyle: FontTextStyle.w400Style(
+              color: Colors.white,
+              fontSize: 38.sp,
+            ),
+            height: 72.h,
+            width: 322.w,
           ),
+          SizedBox(height: 18.h),
           CommonElevatedButton(
-            onPressed: () {
+            onTap: () {
               Get.dialog(
                 Dialog(
                   backgroundColor: Colors.white,
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      SmallElevatedButton(
-                        onPressed: () => Get.back(),
+                      CommonElevatedButton(
+                        onTap: () => Get.back(),
                         title: "Back",
                         height: 62.h,
                         width: 139.w,
@@ -78,15 +92,24 @@ class _MonthlyReportScreenState extends State<MonthlyReportScreen> {
                 transitionDuration: Duration.zero,
               );
             },
-            backgroundColor: const Color(0xFFD9D9D9),
             title: "סריקת חשבונית",
-            titleColor: Colors.black,
+            textStyle: FontTextStyle.w400Style(
+              color: Colors.black,
+              fontSize: 38.sp,
+            ),
+            height: 72.h,
+            width: 322.w,
           ),
+          SizedBox(height: 18.h),
           CommonElevatedButton(
-            onPressed: () => paymentLinkDialogBox(),
-            backgroundColor: const Color(0xFFD9D9D9),
-            title: "תשלום חדש",
-            titleColor: Colors.black,
+            onTap: () => paymentLinkDialogBox(),
+            textStyle: FontTextStyle.w400Style(
+              color: Colors.black,
+              fontSize: 38.sp,
+            ),
+            height: 72.h,
+            width: 322.w,
+            title: 'תשלום חדש',
           ),
         ],
       ),

@@ -33,6 +33,7 @@ class _IncomingTransfersScreenState extends State<IncomingTransfersScreen> with 
       body: Container(
         height: Get.height,
         width: Get.width,
+        clipBehavior: Clip.antiAlias,
         decoration: BackgroundColorContainer.kLinearGradient(),
         child: SafeArea(
           child: Column(

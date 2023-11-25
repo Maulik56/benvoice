@@ -10,4 +10,7 @@ class ImagePath {
   static const String sms = "assets/svg/sms.svg";
   static const String whatsapp = "assets/svg/whatsapp.svg";
   static const String message = "assets/svg/messages.svg";
+  static const String upwardArrow = "assets/svg/arrow_upward.svg";
+  static const String paymentHeader = "assets/images/payment app bar.png";
+  static const String paidThankYou = "assets/images/paid_thank_you-.png";
 }

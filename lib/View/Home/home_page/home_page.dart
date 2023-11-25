@@ -1,15 +1,15 @@
 import 'package:benvoice/Constant/decoration.dart';
 import 'package:benvoice/Constant/image_path.dart';
-import 'package:benvoice/View/Home/Report/Monthly/monthly.dart';
-import 'package:benvoice/View/Home/Report/quarterly.dart';
-import 'package:benvoice/View/Home/Report/weekly.dart';
-import 'package:benvoice/View/Home/Report/yearly.dart';
+import 'package:benvoice/View/Home/Report/MonthlyReport/monthly.dart';
+import 'package:benvoice/View/Home/Report/QrtrlyReport/quarterly.dart';
+import 'package:benvoice/View/Home/Report/WeeklyReport/weekly.dart';
+import 'package:benvoice/View/Home/Report/YearlyReport/yearly.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
-import '../../Constant/text_style.dart';
+import '../../../Constant/text_style.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -38,6 +38,7 @@ class _HomepageState extends State<Homepage> with SingleTickerProviderStateMixin
       body: Container(
         height: Get.height,
         width: Get.width,
+        clipBehavior: Clip.antiAlias,
         decoration: BackgroundColorContainer.kLinearGradient(),
         child: SafeArea(
           child: Column(

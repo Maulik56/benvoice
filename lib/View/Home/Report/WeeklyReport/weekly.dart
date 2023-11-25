@@ -76,14 +76,14 @@ class _WeeklyReportScreenState extends State<WeeklyReportScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SmallElevatedButton(
-                  onPressed: () {},
+                CommonElevatedButton(
+                  onTap: () {},
                   title: "דיווח",
                   height: 62.h,
                   width: 139.w,
                 ),
-                SmallElevatedButton(
-                  onPressed: () {},
+                CommonElevatedButton(
+                  onTap: () {},
                   title: "סנכרון",
                   height: 62.h,
                   width: 158.w,

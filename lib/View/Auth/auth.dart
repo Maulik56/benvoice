@@ -2,7 +2,7 @@ import 'package:benvoice/Constant/decoration.dart';
 import 'package:benvoice/Constant/image_path.dart';
 import 'package:benvoice/Constant/text_style.dart';
 import 'package:benvoice/View/Auth/welcome.dart';
-import 'package:benvoice/View/Home/home_page.dart';
+import 'package:benvoice/View/Home/home_page/home_page.dart';
 import 'package:benvoice/View/Widget/elevated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -25,6 +25,7 @@ class _AuthScreenState extends State<AuthScreen> {
       body: Container(
         height: Get.height,
         width: Get.width,
+        clipBehavior: Clip.antiAlias,
         decoration: BackgroundColorContainer.kRadialGradient(),
         child: SafeArea(
           child: SingleChildScrollView(
@@ -94,8 +95,8 @@ class _AuthScreenState extends State<AuthScreen> {
                   ),
                 ),
                 SizedBox(height: 40.h),
-                SmallElevatedButton(
-                  onPressed: () {
+                CommonElevatedButton(
+                  onTap: () {
                     Get.offAll(
                       () => const Homepage(),
                       duration: const Duration(milliseconds: 300),

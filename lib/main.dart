@@ -1,11 +1,8 @@
 import 'package:benvoice/Constant/font_family.dart';
 import 'package:benvoice/View/Auth/welcome.dart';
-import 'package:benvoice/View/Home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-
-import 'demoDialog.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +25,7 @@ class MyApp extends StatelessWidget {
             fontFamily: FontFamily.alef,
           ),
           home: const Scaffold(
-            body: DemoDialog(),
+            body: WelcomeScreen(),
           ),
         );
       },

@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
-class QuarterlyReportScreen extends StatefulWidget {
-  const QuarterlyReportScreen({super.key});
+class YearlyReportScreen extends StatefulWidget {
+  const YearlyReportScreen({super.key});
 
   @override
-  State<QuarterlyReportScreen> createState() => _QuarterlyReportScreenState();
+  State<YearlyReportScreen> createState() => _YearlyReportScreenState();
 }
 
-class _QuarterlyReportScreenState extends State<QuarterlyReportScreen> {
+class _YearlyReportScreenState extends State<YearlyReportScreen> {
   late List<ChartData> data;
   late TooltipBehavior _tooltip;
 
@@ -27,7 +27,7 @@ class _QuarterlyReportScreenState extends State<QuarterlyReportScreen> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 15.w),
+        padding: EdgeInsets.symmetric(horizontal: 20.w),
         child: Column(
           children: [
             Padding(
@@ -68,14 +68,14 @@ class _QuarterlyReportScreenState extends State<QuarterlyReportScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SmallElevatedButton(
-                  onPressed: () {},
+                CommonElevatedButton(
+                  onTap: () {},
                   title: "דיווח",
                   height: 62.h,
                   width: 139.w,
                 ),
-                SmallElevatedButton(
-                  onPressed: () {},
+                CommonElevatedButton(
+                  onTap: () {},
                   title: "סנכרון",
                   height: 62.h,
                   width: 158.w,
